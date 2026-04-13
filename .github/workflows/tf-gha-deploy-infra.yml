@@ -44,7 +44,7 @@ jobs:
       terraform_workingdir: ${{ needs.get-config.outputs.terraform_workingdir }}
       terraform_st_location: ${{ needs.get-config.outputs.terraform_st_location }}
       create_tfstate_resources: false
-      terraform_st_resource_group: rg-existing-tfstate
+      terraform_st_resource_group: rg-devt-mlopsgaather
       terraform_st_storage_account: existingstorageacct
       terraform_st_container_name: tfstate
       terraform_st_key: dev.tfstate
