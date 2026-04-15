@@ -24,8 +24,3 @@ variable "env" {
   type        = string
   description = "Environment prefix"
 }
-
-variable "create_resource_group" {
-    type      = bool
-    default   = true
-}
