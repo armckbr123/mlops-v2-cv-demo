@@ -78,6 +78,6 @@ jobs:
       # multiprocessing_sharing_strategy: "file_system" # WARNING: this can cause hang at job completion
 
       # Model Registrataion
-      register_model_as: "resnet-dogs-classifier"
+      register_model_as: "resnet-dogs-classifier-${{name}}"
 
 # </jobs>
