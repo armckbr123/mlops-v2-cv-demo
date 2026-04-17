@@ -8,7 +8,7 @@ dependencies:
   - pylint
   - pip
   - pip:
-      - mlflow==2.2.2 # package version >=2.0,<3.0, somewhat arbitary but ensures package at a time after mlfow.data API was introduced and prior to Azure ML new packages
+      - mlflow>=2.3.0,<3.0 # package version needed update to import dataset
       - cloudpickle==1.6.0
       - scikit-learn==0.24.2
       - flask==1.1.2
