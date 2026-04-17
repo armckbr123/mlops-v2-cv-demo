@@ -60,17 +60,17 @@ jobs:
       environment_file: mlops/azureml/train/train-env.yaml
     secrets:
       creds: ${{secrets.AZURE_CREDENTIALS}}
-  register-dataset:
-    needs: [get-config, register-environment]
-    uses: armckbr123/mlops-templates/.github/workflows/register-dataset.yml@main
-    with:
-      resource_group: ${{ needs.get-config.outputs.resource_group }}
-      workspace_name: ${{ needs.get-config.outputs.aml_workspace }}
-      data_file: mlops/azureml/train/create_stanford_dogs_dataset.yaml
-      file_type: Training
-      name: stanford_dogs
-    secrets:
-      creds: ${{secrets.AZURE_CREDENTIALS}}
+  #register-dataset:
+  #  needs: [get-config, register-environment]
+  #  uses: armckbr123/mlops-templates/.github/workflows/register-dataset.yml@main
+  #  with:
+  #    resource_group: ${{ needs.get-config.outputs.resource_group }}
+  #    workspace_name: ${{ needs.get-config.outputs.aml_workspace }}
+  #    data_file: mlops/azureml/train/create_stanford_dogs_dataset.yaml
+  #    file_type: Training
+  #    name: stanford_dogs
+  #  secrets:
+  #    creds: ${{secrets.AZURE_CREDENTIALS}}
   run-model-training-pipeline:
     needs:
       [
@@ -78,7 +78,7 @@ jobs:
         create-dataprep-compute,
         create-training-compute,
         register-environment,
-        register-dataset,
+      #  register-dataset,
       ]
     uses: armckbr123/mlops-templates/.github/workflows/run-pipeline.yml@main
     with:
