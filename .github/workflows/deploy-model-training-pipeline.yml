@@ -43,7 +43,7 @@ jobs:
     uses: armckbr123/mlops-templates/.github/workflows/create-compute.yml@main
     with:
       cluster_name: gpu-cluster
-      size: Standard_NC6
+      size: Standard_NC6s_v3
       min_instances: 0
       max_instances: 1
       cluster_tier: low_priority
