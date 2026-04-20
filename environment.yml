@@ -1,4 +1,5 @@
 name: azureml-cli-v2
+version: 2
 channels:
   - conda-forge
   - defaults
