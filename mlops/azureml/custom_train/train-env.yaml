@@ -3,9 +3,13 @@ schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
 name: cv-custom-train-env
 version: 1.0.1
 
-channels:
-  - conda-forge
-  - defaults
+
+image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+
+conda:
+  channels:
+    - conda-forge
+    - defaults
 
 dependencies:
   - python=3.8
