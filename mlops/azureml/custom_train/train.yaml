@@ -1,5 +1,5 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
-name: cv-custom-train:1.1
+name: cv-custom-train
 display_name: Custom CV Training
 type: command
 
@@ -10,7 +10,7 @@ inputs:
     type: uri_folder
 
 code: .
-environment: file:train-env.yaml
+environment: azureml:cv-custom-train-env:1.1
 
 command: >
   python train.py
