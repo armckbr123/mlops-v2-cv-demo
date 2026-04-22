@@ -1,5 +1,5 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
-name: cv-custom-train
+name: cv-custom-train:1.1
 display_name: Custom CV Training
 type: command
 
