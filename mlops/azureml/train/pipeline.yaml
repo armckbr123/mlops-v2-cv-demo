@@ -23,7 +23,7 @@ settings:
 jobs:
   train:
     type: command
-    component: file:train.yaml
+    component: file:../custom_train/train.yaml
     compute: azureml:gpu-cluster
     resources:
       instance_count: 1 # number of nodes

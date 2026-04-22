@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: cv-custom-train
+display_name: Custom CV Training
+type: command
+
+inputs:
+  train_images:
+    type: uri_folder
+  valid_images:
+    type: uri_folder
+
+code: .
+environment: file:train-env.yaml
+
+command: >
+  python train.py
+  --train_images ${{inputs.train_images}}
+  --valid_images ${{inputs.valid_images}}
+
